@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
+
+  <body>
+	
+    <div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+      <button-counter></button-counter>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+
+    <script>
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World!"
+          }
+        }
+      });
+    </script>
+
+    <div id="app">
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    <button-counter></button-counter>
+    </div>
+    
+    <script>
+        Vue.component('button-counter', {
+        template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>',
+        data() {
+        return {
+        count: 0
+      }
+    }
+    
+    });
+
+    new Vue({
+     el: '#app' 
+    })
+    </script>
+
+
+
+
+
+
+    
+
+
+  </body>
+</html>
+    
